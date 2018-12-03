@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Countryside Photography</title>
+    <link rel="shortcut icon" type="image/png" href="photos/favicon_c.jpg"/>
+    <style>
+
+        * {
+            margin: 0;
+        }
+
+        .surround_container {
+            height: 800px;
+            overflow: auto;
+            white-space: nowrap;
+            position: relative;
+        }
+
+        .horizontal_page {
+            display: inline-block;
+            height: 800px;
+            width: 1440px;
+            background-color: white;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .horizontal_page2 {
+            display: inline-block;
+            height: 800px;
+            width: 1440px;
+            background-color: white;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .dot {
+            cursor: pointer;
+            height: 300px;
+            width: 300px;
+            position: absolute;
+            top: 200px;
+            left: 550px;
+            background-color: #EFCAD0;
+            border-radius: 150px;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+            text-align: center;
+        }
+
+        .h1gallery {
+            position: relative;
+            padding-top: 125px;
+            color: white;
+        }
+
+        h3 {
+            position: absolute;
+            top: 525px;
+            left: 620px;
+            font-family: "Futura PT", sans-serif, Arial;
+        }
+
+        .upbox {
+            width: 275px;
+            height: 75px;
+            background-color: #EFCAD0;
+        }
+
+        .h1 {
+            font-size: 120px;
+            font-family: "Futura PT", sans-serif, Arial;
+            position: relative;
+        }
+
+        img {
+            margin-left: 430px;
+            padding-top: 25px;
+            position: relative;
+        }
+
+        .pcountryside {
+            position: relative;
+            top: 16px;
+            left: 55px;
+            font-size: 30px;
+            font-family: "Futura PT", sans-serif, Arial;
+            color: white;
+        }
+
+        .home {
+            height: 800px;
+            width: 1440px;
+            background-color: #EFCAD0;
+        }
+
+        .view2 {
+            height: 800px;
+            background-color: #EFCAD0;
+            margin: auto;
+            padding: 140px 0;
+            position: absolute;
+        }
+
+        nav.transbox {
+            background-color: darkred;
+            opacity: 0.3;
+            filter: alpha(opacity=60);
+            position: relative;
+        }
+
+        .center {
+            margin: 0 auto;
+            width: 1100px;
+            height: 650px;
+            background-image: url("photos/solo_bride.jpg")
+        }
+
+        .countryside {
+            font-family: "Futura PT", sans-serif, Avenir;
+            font-weight: lighter;
+            font-size: 70px;
+            float: left;
+            margin-left: 70px;
+            padding-top: 115px;
+        }
+
+        .photography {
+            text-align: left;
+            font-size: 65px;
+            margin-right: 400px;
+            margin-left: 170px;
+            padding-top: 30px;
+        }
+
+        .brad {
+            font-family: "Futura PT", sans-serif, Avenir;
+            font-weight: lighter;
+            font-size: 70px;
+            float: left;
+            margin-left: 610px;
+        }
+
+        .padding {
+            height: 60px;
+            width: 80px;
+            opacity: 0;
+        }
+
+        .hometextp2 {
+            margin-left: 170px;
+            padding-top: 15px;
+            font-family: "Futura PT", sans-serif, Arial;
+            font-size: 16px;
+            color: black;
+        }
+
+        nav {
+            float: top;
+            text-align: left;
+        }
+
+        ol {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333333;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 16px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: #111111;
+        }
+
+        .hometext {
+            font-family: "Futura PT", sans-serif, Arial;
+            font-size: 16px;
+            color: black;
+            margin-left: 100px;
+            padding-top: 20px;
+        }
+
+        .ccinfo {
+            margin-left: 650px;
+            float: top;
+            position: absolute;
+            margin-bottom: 75px;
+        }
+
+        .foot {
+            width: 1440px;
+            height: 300px;
+            background-color: #8d2f3a;
+            position: relative;
+            margin-top: 190px;
+            padding-bottom: 150px;
+        }
+
+        .countryside2 {
+            font-family: "Futura PT", sans-serif, Avenir;
+            font-weight: lighter;
+            font-size: 45px;
+            margin-top:75px
+        }
+
+        .photography2 {
+            text-align: left;
+            font-size: 40px;
+            margin-left: 40px;
+        }
+
+        .contact_containers {
+            margin-left: 725px;
+            margin-top: 5px;
+            position: relative;
+        }
+
+        .textarea2 {
+            display: inline;
+            font-family: "Futura PT", sans-serif, Arial;
+            font-size: 16px;
+            color: gray;
+        }
+
+        .input2 {
+            height: 70px;
+            width: 70px;
+            border-radius: 50%;
+            font-family: "Futura PT", sans-serif, Arial;
+            font-size: 20px;
+            margin-left: 290px;
+            margin-top: 20px;
+
+        }
+
+        .pic {
+            height: 420px;
+            width: 280px;
+            position: relative;
+            float: left;
+        }
+
+        .img2 {
+            height: 420px;
+            width: 280px;
+        }
+
+        .logo {
+            margin-left: 300px;
+            padding-top: 75px;
+            margin-top: 125px;
+        }
+
+        .vl {
+            border-left: 6px solid green;
+            height: 100px;
+            margin-left: 600px;
+        }
+
+        .logo1 {
+            padding-left: 75px;
+        }
+
+        .bot1 {
+            font-family: "Futura PT", sans-serif, Avenir;
+            font-weight: lighter;
+            font-size: 14px;
+        }
+
+        .bot2 {
+            font-family: "Futura PT", sans-serif, Avenir;
+            font-weight: bolder;
+            font-size: 14px;
+        }
+
+        .footlinks {
+            font-family: "Futura PT", sans-serif, Avenir;
+            font-weight: bolder;
+            font-size: 20px;
+            margin-left: 700px;
+            position: absolute;
+        }
+
+        .footlinks2 {
+            font-family: "Futura PT", sans-serif, Avenir;
+            font-weight: bolder;
+            font-size: 20px;
+            margin-left: 850px;
+            position: absolute;
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="home">
+    <div class="padding"></div>
+    <article class="center">
+        <nav class="transbox">
+            <ol>
+                <li><a>About</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a>Calendar</a></li>
+                <li><a>Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ol>
+        </nav>
+        <img class="logo1" src="photos/countryside_logo_c.png">
+        <h1 class="countryside">Countryside <br></h1>
+        <h1 class="photography">Photography</h1>
+        <p class="hometext">Customer satisfaction through dynamic innovative photography <br> utilizing experience,
+            training, technology and the finest<br> equipment to capture the right image for our patrons.</p>
+        <p class="hometextp2">Serving the Washington County area with professional <br>photography since 1985.
+            Offering indoor classical studio <br>portraits, outdoor portraits, in home or on location. </p>
+        <h1 class="brad">by Brad Cornell</h1>
+    </article>
+</div>
+
+<div class="surround_container"> <!-- container for horizontal scroll -->
+    <div class="horizontal_page">
+        <div>
+            <span class="dot">
+                <a target="gallery"></a>
+                <h1 class="h1gallery">Gallery</h1>
+            </span>
+            <h3>Scroll to the right >></h3>
+        </div>
+    </div>
+    <div class="horizontal_page2">
+        <div class="upbox">
+            <p class=pcountryside> Countryside ^</p>
+        </div>
+        <img src="photos/senior_gallery.jpg">
+        <h1 class="h1"> Senior Portraits</h1>
+    </div>
+    <div class="horizontal_page2">
+        <div class="upbox">
+            <p class=pcountryside> Countryside ^</p>
+        </div>
+        <img src="photos/wedding_gallery2.jpg">
+        <h1 class="h1"> Weddings</h1>
+    </div>
+    <div class="horizontal_page2">
+        <div class="upbox">
+            <p class=pcountryside> Countryside ^</p>
+        </div>
+        <img src="photos/family_gallery.jpg">
+        <h1 class="h1"> Families</h1>
+    </div>
+</div>
+
+<div class="view2"> <!-- container for bottom -->
+    <div class="pic"><img class=img2 src="photos/contact.jpg"></div>
+    <div class="contact_containers">
+        <form id="usrform"></form>
+        <br>
+        <textarea class=textarea2 rows="2" cols="50" name="comment" form="usrform">
+Name</textarea><br>
+        <textarea class=textarea2 rows="2" cols="50" name="comment" form="usrform">
+Phone Number</textarea><br>
+        <textarea class=textarea2 rows="2" cols="50" name="comment" form="usrform">
+Email</textarea><br>
+        <textarea class=textarea2 rows="8" cols="50" name="comment" form="usrform">
+Message</textarea><br>
+        <input class=input2 type="submit">
+    </div>
+    <div class="foot">
+        <div class="logo">
+            <h2 class="countryside2">Countryside</h2>
+            <h2 class="photography2">Photography</h2>
+            <div class="footlinks">
+                <div>
+                    <p>About</p>
+                    <p>Services</p>
+                    <p>Contact</p>
+                </div>
+            </div>
+            <div class="footlinks2">
+                <div class="links2">
+                    <p>Calendar</p>
+                    <p>Gallery</p>
+                    <p>Links</p>
+                </div>
+            </div>
+        </div>
+        <div class="ccinfo">
+            <p class="bot1">2733 Neal Ave N <br>Stillwater, MN 55082</p>
+            <br>
+            <p class="bot2">651.494.4445<br>Map | Directions</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
